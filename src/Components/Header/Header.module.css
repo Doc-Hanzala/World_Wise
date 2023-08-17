@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-direction: column;
+}
+
+.img {
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.link {
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0rem;
+}
+
+/* 800px */
+@media screen and (min-width: 800px) {
+  .header {
+    padding: 1rem 3rem;
+    flex-direction: row;
+  }
+
+  .img {
+    height: 4rem;
+    margin-bottom: 0;
+  }
+
+  .link {
+    margin-left: 2rem;
+  }
+}

@@ -1,0 +1,33 @@
+.login {
+  background: rgb(54, 54, 54);
+  height: 100%;
+}
+
+form {
+  background: rgb(109, 109, 109);
+
+  padding: 2rem;
+  width: 80vw;
+  max-width: 30rem;
+  margin: 6rem auto;
+  border-radius: 10px;
+}
+
+.input {
+  margin-bottom: 1.5rem;
+  color: rgb(231, 229, 229);
+}
+.label {
+  margin: 0.5rem 0;
+}
+
+.inputTag {
+  width: 90%;
+  padding: 1rem;
+  border-radius: 10px;
+  outline: none;
+  border: transparent;
+  margin-top: 0.5rem;
+  background: rgb(231, 229, 229);
+  font-size: 1rem;
+}

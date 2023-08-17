@@ -1,0 +1,47 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 7rem);
+  padding: 0 5rem;
+  text-align: center;
+}
+
+.heading,
+.subHeading {
+  color: orangered;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.heading {
+  margin-bottom: 1rem;
+}
+
+.para {
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+
+@media screen and (min-width: 600px) {
+  .heading,
+  .subHeaing {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .para {
+    line-height: 1.8;
+  }
+}
+@media screen and (min-width: 800px) {
+  .heading,
+  .subHeaing {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+}

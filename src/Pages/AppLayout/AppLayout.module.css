@@ -1,0 +1,12 @@
+.appLayout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  .appLayout {
+    flex-direction: row;
+  }
+}

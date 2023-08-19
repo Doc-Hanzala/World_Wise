@@ -7,11 +7,13 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: capitalize;
+  overflow: hidden;
 }
 
 .main {
   background: black;
   height: calc(100vh - 2rem);
+
   margin: 1rem;
   background: linear-gradient(rgba(36, 42, 46, 0.8), rgba(36, 42, 46, 0.8)),
     url("../public/bg.jpg");

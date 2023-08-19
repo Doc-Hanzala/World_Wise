@@ -1,0 +1,13 @@
+.map {
+  height: 50%;
+  background: rgb(54, 54, 54);
+  overflow: scroll;
+}
+
+@media screen and (min-width: 900px) {
+  .map {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}

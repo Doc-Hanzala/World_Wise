@@ -1,0 +1,12 @@
+.country {
+  color: white;
+  background: rgb(128, 128, 128);
+  border-radius: 10px;
+  border-left: 5px solid orangered;
+  max-width: 30rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}

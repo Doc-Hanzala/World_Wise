@@ -17,7 +17,7 @@ const Home = () => {
           of. Never forget your wonderful experiences, and show your friends how
           you have wandered the world.
         </p>
-        <Link to='/login' >
+        <Link to="/login">
           <button className="btn homeBtn">start tracking now</button>
         </Link>
       </div>

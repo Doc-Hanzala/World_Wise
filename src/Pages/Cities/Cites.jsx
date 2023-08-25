@@ -7,7 +7,7 @@ const Cites = ({ cities, loading }) => {
     return <Loading />;
   }
 
-  return (
+  return ( 
     <div className={styles.cities}>
       {cities.map((city) => {
         return <City key={city.id} {...city} />;

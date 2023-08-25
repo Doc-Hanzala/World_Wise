@@ -26,7 +26,7 @@ const Countries = ({ cities, loading }) => {
   return (
     <div className={styles.countries}>
       {countries.map((country) => {
-        return <Country {...country} />;
+        return <Country key={country.emoji} {...country} />; 
       })}
     </div>
   );

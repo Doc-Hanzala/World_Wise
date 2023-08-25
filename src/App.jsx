@@ -9,6 +9,7 @@ import AppLayout from "./Pages/AppLayout/AppLayout";
 import Cites from "./Pages/Cities/Cites";
 import Countries from "./Pages/Countries/Countries";
 import { useEffect, useState } from "react";
+import CityInfo from "./Components/CityInfo/CityInfo";
 
 const BASE_URL = "http://localhost:8000";
 
@@ -36,15 +37,16 @@ function App() {
     <div className="main">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/appLayout" element={<AppLayout />}>
+        <Route path="pricing" element={<Pricing />} />
+        <Route path="product" element={<Product />} />
+        <Route path="login" element={<Login />} />
+        <Route path="appLayout" element={<AppLayout />}>
           <Route index element={<Cites loading={loading} cities={cities} />} />
           <Route
             path="cities"
             element={<Cites loading={loading} cities={cities} />}
           />
+          <Route path="cities/:id" element={<CityInfo />} />
           <Route
             path="countries"
             element={<Countries cities={cities} loading={loading} />}

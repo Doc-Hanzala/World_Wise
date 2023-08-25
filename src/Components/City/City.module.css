@@ -9,10 +9,16 @@
   margin: 1rem auto;
   border-radius: 10px;
   border-left: 5px solid orangered;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.city:hover{
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
 }
 
 h3 {
-  display: inline-block;
+  display: inline-block; 
   padding: 0.5rem;
 }
 

@@ -1,8 +1,10 @@
 import Country from "../../Components/Country/Country";
 import Loading from "../../Components/Loading/Loading";
+import { useGlobalContext } from "../../Context/Context";
 import styles from "./Countries.module.css";
 
-const Countries = ({ cities, loading }) => {
+const Countries = () => {
+  const { loading, cities } = useGlobalContext();
   if (loading) {
     return <Loading />;
   }
@@ -26,7 +28,7 @@ const Countries = ({ cities, loading }) => {
   return (
     <div className={styles.countries}>
       {countries.map((country) => {
-        return <Country key={country.emoji} {...country} />; 
+        return <Country key={country.emoji} {...country} />;
       })}
     </div>
   );

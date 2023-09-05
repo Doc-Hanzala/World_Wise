@@ -1,12 +1,13 @@
 .sideBar {
-  height: 50%;
+  height: 40rem;
   text-align: center;
   background: rgb(54, 54, 54);
-  overflow: scroll;
+   overflow: hidden;
+
 }
 
 .img {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; 
   width: 10rem;
   margin: 1rem 0;
 }
@@ -15,7 +16,7 @@
   .sideBar {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+  
   }
 
   .img {

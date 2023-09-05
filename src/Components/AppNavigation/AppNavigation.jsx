@@ -3,8 +3,8 @@ import { NavLink, Outlet } from "react-router-dom";
 import styles from "./AppNavigation.module.css";
 
 const AppNavigation = () => {
-  return (
-    <div>
+  return ( 
+    <div> 
       <NavLink to="cities" className={styles.navigation}>
         <button className="btn">cities</button>
       </NavLink>

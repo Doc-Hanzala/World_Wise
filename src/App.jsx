@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate  } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Home from "./Pages/Home/Home";
 import Pricing from "./Pages/Pricing/Pricing";
@@ -8,32 +8,10 @@ import Error from "./Pages/Error/Error";
 import AppLayout from "./Pages/AppLayout/AppLayout";
 import Cites from "./Pages/Cities/Cites";
 import Countries from "./Pages/Countries/Countries";
-import { useEffect, useState } from "react";
 import CityInfo from "./Components/CityInfo/CityInfo";
-import Form from './Components/Form/Form'
+import Form from "./Components/Form/Form";
 
-const BASE_URL = "http://localhost:8000";
-
-function App() {
-  const [cities, setCities] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const getCities = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch(`${BASE_URL}/cities`);
-      const data = await response.json();
-      setCities(data);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getCities();
-  }, []);
-
+function App() { 
   return (
     <div className="main">
       <Routes>
@@ -43,20 +21,10 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="appLayout" element={<AppLayout />}>
           <Route index element={<Navigate to="cities" />} />
-          <Route
-            path="cities"
-            element={<Cites loading={loading} cities={cities} />}
-          />
+          <Route path="cities" element={<Cites />} />
           <Route path="cities/:id" element={<CityInfo />} />
-          <Route
-            path="countries"
-            element={<Countries cities={cities} loading={loading} />}
-          />
-          <Route
-            path="form"
-            element={<Form/>}
-          />
-         
+          <Route path="countries" element={<Countries />} />
+          <Route path="form" element={<Form />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

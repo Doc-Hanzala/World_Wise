@@ -37,3 +37,7 @@ h3 {
 .icon:hover {
   color: orangered;
 }
+
+.active{
+  border: 2px solid orangered;
+}

@@ -6,6 +6,7 @@
   border-radius: 50%;
   border-top: 5px solid black;
   animation: rotate 0.8s ease-in-out infinite;
+
 }
 
 @keyframes rotate {

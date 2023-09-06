@@ -1,10 +1,11 @@
-"https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=0&longitude=0";
-
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 import styles from "./Form.module.css";
 import Loading from "../Loading/Loading";
+import { useGlobalContext } from "../../Context/Context";
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -22,14 +23,17 @@ function Form() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [emoji, setEmoji] = useState("");
-
+  const { addCityInfo,loading } = useGlobalContext();
   const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+
   const lat = searchParams.get("lat");
   const lng = searchParams.get("lng");
 
-  const navigate = useNavigate();
-
   useEffect(() => {
+    if (!lat && !lng) {
+      return;
+    }
     const getCityLocation = async () => {
       try {
         setIsLoading(true);
@@ -53,8 +57,28 @@ function Form() {
     return <Loading />;
   }
 
+  if (!lat && !lng) {
+    return alert("Start by clicking anywhere on the map");
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const newCity = {
+      cityName,
+      country,
+      date,
+      emoji,
+      position: { lat, lng },
+      notes,
+    };
+
+    await addCityInfo(newCity);
+    navigate("/appLayout/cities");
+  }
+
   return (
-    <form className={styles.form}>
+    <form onSubmit={handleSubmit} className={`${styles.form} ${loading ? styles.loading:""} `}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
@@ -67,10 +91,12 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        <input
+
+        <DatePicker
           id="date"
-          onChange={(e) => setDate(e.target.value)}
-          value={date}
+          onChange={(date) => setDate(date)}
+          selected={date}
+          dateFormat="dd/MM/yyyy"
         />
       </div>
 

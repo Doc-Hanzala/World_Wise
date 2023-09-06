@@ -35,12 +35,52 @@ const AppProvider = ({ children }) => {
     }
   };
 
+  const addCityInfo = async (newCity) => {
+    try {
+      setLoading(true);
+      const response = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: {
+          "content-type": "application/json",
+        },
+      });
+      const data = await response.json();
+      setCities([...cities, data]);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const delCity = async (id) => {
+    try {
+      setLoading(true);
+       await fetch(`${BASE_URL}/cities/${id}`, {
+        method: "DELETE",
+      });
+
+      setCities((cities)=> cities.filter((city)=> city.id !== id));
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     getCities();
   }, []);
 
   return (
-    <appContext.Provider value={{ cities, loading,getCityInfo,currentCity }}>
+    <appContext.Provider
+      value={{
+        cities,
+        loading,
+        getCityInfo,
+        currentCity,
+        addCityInfo,
+        delCity,
+      }}
+    >
       {children}
     </appContext.Provider>
   );

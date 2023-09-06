@@ -11,8 +11,15 @@ const formatDate = (date) =>
     year: "numeric",
   }).format(new Date(date));
 
+
+
 const City = ({ cityName, Country, emoji, date, id, position }) => {
-  const { currentCity } = useGlobalContext();
+  const { currentCity, delCity } = useGlobalContext();
+
+    function handleDel(e) {
+      e.preventDefault();
+      delCity(id)
+    }
   return (
     <Link
       to={`${id}?lat=${position.lat}&lng=${position.lng}`}
@@ -26,7 +33,10 @@ const City = ({ cityName, Country, emoji, date, id, position }) => {
       </div>
       <div className={styles.left}>
         <h3>{formatDate(date)}</h3>
-        <AiFillCloseCircle className={styles.icon} />
+        <AiFillCloseCircle
+          onClick={handleDel}
+          className={styles.icon}
+        />
       </div>
     </Link>
   );

@@ -42,9 +42,11 @@ const Map = () => {
 
   return (
     <div className={styles.mapContainer}>
-      { !geoLocationPosition && <button onClick={getPosition} className="btn positionBtn">
-        {geoLocationLoading ?'loading' :"get current location"}
-      </button>}
+      {!geoLocationPosition && (
+        <button onClick={getPosition} className="btn positionBtn">
+          {geoLocationLoading ? "loading" : "get current location"}
+        </button>
+      )}
       <MapContainer
         className={styles.map}
         center={mapPosition}
@@ -56,9 +58,11 @@ const Map = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {cities.map((city) => {
-          console.log(city);
           return (
-            <Marker key={city.id} position={[city.position.lat,city.position.lng]}>
+            <Marker
+              key={city.id}
+              position={[city.position.lat, city.position.lng]}
+            >
               <Popup>
                 {city.emoji} - {city.cityName}
               </Popup>

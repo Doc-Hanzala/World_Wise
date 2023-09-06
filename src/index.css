@@ -1,9 +1,11 @@
+@import "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css";
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 } 
-
+ 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: capitalize;
@@ -37,6 +39,14 @@ body {
 
 .homeBtn {
   padding: 1rem 2rem;
+}
+
+.positionBtn{
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%,-50%);
+  z-index: 1000;
 }
 
 .active {

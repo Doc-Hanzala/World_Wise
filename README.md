@@ -20,4 +20,6 @@
   -  Run "npm run server " in terminal
   -  Run " npm run dev " in terminal
   -  Open the link
- 
+
+ # Video Preview
+ https://github.com/Doc-Hanzala/World_Wise/assets/129552329/391b53e7-a2a2-4b03-9f87-df2e1f45045f

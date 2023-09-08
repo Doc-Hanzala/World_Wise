@@ -23,7 +23,7 @@ function Form() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [emoji, setEmoji] = useState("");
-  const { addCityInfo,loading } = useGlobalContext();
+  const { addCityInfo, loading } = useGlobalContext();
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
 
@@ -78,7 +78,10 @@ function Form() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className={`${styles.form} ${loading ? styles.loading:""} `}>
+    <form
+      onSubmit={handleSubmit}
+      className={`${styles.form} ${loading ? styles.loading : ""} `}
+    >
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input

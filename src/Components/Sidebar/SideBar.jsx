@@ -10,7 +10,7 @@ const SideBar = () => {
         <img className={styles.img} src={img} alt="" />
       </Link>
       <AppNavigation />
-    </div> 
+    </div>
   );
 };
 

@@ -1,0 +1,55 @@
+.user {
+  position: absolute;
+  top: 45rem;
+  right: 2rem;
+  background-color: rgb(134, 134, 134);
+  border-radius: 7px;
+  z-index: 999;
+  box-shadow: 0 0.8rem 2.4rem rgba(36, 42, 46, 0.5);
+  font-size: 0.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user img {
+  border-radius: 100px;
+  height: 2rem;
+}
+
+.user button {
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .user {
+    top: 2rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    gap: 1rem;
+  }
+
+  .user img {
+    height: 4rem;
+  }
+  .user button {
+    background-color: var(--color-dark--2);
+    border-radius: 7px;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

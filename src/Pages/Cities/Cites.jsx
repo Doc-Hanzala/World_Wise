@@ -6,7 +6,7 @@ import styles from "./Cities.module.css";
 const Cites = () => {
   const { loading, cities } = useGlobalContext();
   if (loading) {
-    return <Loading />; 
+    return <Loading />;
   }
 
   return (

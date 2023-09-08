@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 import styles from "./CityInfo.module.css";
 import { useGlobalContext } from "../../Context/Context";
-import Loading from '../Loading/Loading'
+import Loading from "../Loading/Loading";
 
 const CityInfo = () => {
   const { loading, getCityInfo, currentCity } = useGlobalContext();
@@ -26,7 +26,7 @@ const CityInfo = () => {
   const { cityName, emoji, date, notes } = currentCity;
 
   if (loading) {
-    return <Loading/>;
+    return <Loading />;
   }
 
   return (
@@ -64,7 +64,6 @@ const CityInfo = () => {
         back
       </button>
     </div>
-  
   );
 };
 

@@ -1,9 +1,9 @@
 .appLayout {
-  height: 210vh; 
+  height: 210vh;
   display: flex;
   flex-direction: column;
   width: 100%;
-} 
+}
 
 @media screen and (min-width: 900px) {
   .appLayout {
@@ -11,4 +11,3 @@
     height: 100%;
   }
 }
- 

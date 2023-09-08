@@ -1,28 +1,16 @@
 {
   "cities": [
     {
-      "cityName": "Quetta",
-      "country": "Pakistan",
-      "date": "2023-09-06T06:42:04.150Z",
-      "emoji": "🇵🇰",
+      "cityName": "Bir Mogrein",
+      "country": "Mauritania",
+      "date": "2023-09-08T23:15:21.525Z",
+      "emoji": "🇲🇷",
       "position": {
-        "lat": "30.162928738810418",
-        "lng": "67.05028629520217"
+        "lat": "25.55936488800549",
+        "lng": "-11.69548612739122"
       },
-      "notes": "csa",
-      "id": 98443207
-    },
-    {
-      "cityName": "Qaḑa’ Shaţţ al ‘Arab",
-      "country": "Iraq",
-      "date": "2023-09-06T07:13:25.650Z",
-      "emoji": "🇮🇶",
-      "position": {
-        "lat": "30.67770306524913",
-        "lng": "47.95096234996251"
-      },
-      "notes": "asd",
-      "id": 98443208
+      "notes": "sadas",
+      "id": 1
     }
   ]
 }

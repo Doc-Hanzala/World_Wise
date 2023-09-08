@@ -55,11 +55,11 @@ const AppProvider = ({ children }) => {
   const delCity = async (id) => {
     try {
       setLoading(true);
-       await fetch(`${BASE_URL}/cities/${id}`, {
+      await fetch(`${BASE_URL}/cities/${id}`, {
         method: "DELETE",
       });
 
-      setCities((cities)=> cities.filter((city)=> city.id !== id));
+      setCities((cities) => cities.filter((city) => city.id !== id));
       setLoading(false);
     } catch (error) {
       console.log(error);

@@ -8,4 +8,4 @@
 - useReducer
 
 # Live Preview
-https://maplocater.netlify.app/
+https://theworldwise.netlify.app/
